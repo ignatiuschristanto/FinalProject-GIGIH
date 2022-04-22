@@ -38,7 +38,7 @@ const Login: React.FC = () => {
     const getSpotifyLinkAuthorize= () => {
         const state= Date.now().toString();
         const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-        const redirectUri = 'http://localhost:3000';
+        const redirectUri = window.location.href;
         const scope = 'playlist-modify-private';
         return `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}&state=${state}`;
     }
