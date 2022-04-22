@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Login from './pages/LoginPage';
+import {BrowserRouter as Switch, Route} from 'react-router-dom';
+import Home from './pages/HomePage';
+import { useTypedSelector } from './redux/store';
 
-function App() {
+
+const App = () => {
+  const isLogin = useTypedSelector((state) => state.authToken.isLogin)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='App'>
+    <Switch>
+      {isLogin? 
+      <> 
+      <Route path="/create-playlist" exact component = {Home}/> 
+      </>
+      : null
+      }
+      <Route path="/" component={Login} />
+  </Switch>
+  </div>
   );
 }
 
