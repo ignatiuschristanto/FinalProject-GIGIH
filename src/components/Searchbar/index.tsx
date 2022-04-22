@@ -19,17 +19,18 @@ const SearchBar: React.FC<SearchProps> = (props): JSX.Element => {
     const {getTracks, handleInput, tracks, toggleSelect, input} = props
     return (
         <>
-        <form className="search-form" onSubmit={getTracks}>
+        <form className="search-form" onSubmit={getTracks} data-testid="search-form">
           <input 
               id = "searchKey"
               name = "searchKey"
               type= "text" 
               placeholder="Search Songs" 
               className="input-search" 
+              data-testid ="search-input"
               value={input.searchKey}
               required 
               onChange={handleInput} />
-          <button type="submit" className="new-btn search">Search</button>
+          <button type="submit" className="new-btn search" >Search</button>
         </form>
         <div className="content">
               {tracks.map(song => (
