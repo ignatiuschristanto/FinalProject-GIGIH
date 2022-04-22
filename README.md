@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 This project was build especially for my Final Project Assignment at GenerasiGIGIH 2.0 ... And yes you did not get the name wrong (I have bad naming sense).\
-Deploy link: https://final-project-gigih-eta.vercel.app/ 
+Deploy link: https://final-project-gigih-65jjep1mc-christantoignatius-gmailcom.vercel.app/
 
 ## App flow
 
